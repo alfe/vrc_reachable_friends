@@ -1,0 +1,23 @@
+  {
+    "name": "reachable friends in vrchat",
+    "description" : "reachable friends in vrchat",
+    "version": "1.03",
+    "manifest_version": 2,
+    "icons" : {
+      "24" : "vrcr24.png",
+      "48" : "vrcr24.png"
+    },
+    "content_scripts": [
+      {
+        "run_at": "document_end",
+        "matches": [
+            "https://www.vrchat.net/",
+            "https://www.vrchat.net/home",
+            "https://www.vrchat.net/home#",
+            "https://www.vrchat.net/home/login"
+        ],
+        "css": ["css.css"], 
+        "js": ["jquery.js", "js.js"]
+      }
+    ]
+  }

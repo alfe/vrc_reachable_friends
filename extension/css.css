@@ -1,0 +1,56 @@
+#friend-dialog {
+    /*position: absolute;*/
+    /*z-index: 10;*/
+    background: #333;
+}
+
+button#reload-friend {
+	width: 80%;
+    margin: 1em 10%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.flex {
+	display: flex;
+}
+
+.world-group {
+    width: 60%;
+	margin:1em; 
+	margin-right: 0;
+	padding:1em; 
+	border: solid #ccc; 
+	border-radius: 12px 0 0 12px; 
+	display: block; color: white;
+}
+.world-group:hover {
+    background: #444;
+    color: white;
+}
+
+.world-info {
+    width: 40%;
+	margin:1em; 
+	margin-left: 0;
+	border: solid #ccc; 
+	border-left: none;
+	border-radius: 0 12px 12px 0; 
+	color: white;
+    overflow: hidden;
+}
+.world-info a {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    background: #ccc;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-name {
+	width: 12em; display: inline-block; word-wrap: break-word;
+}
+.user-status-description {
+    color: #aaa; font-size: 0.6em;
+}
