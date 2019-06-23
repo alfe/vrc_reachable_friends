@@ -22,7 +22,7 @@ const appendGroups = (worldArr) => {
         $.get(`/api/1/worlds/${worldId.split(":")[0]}`).then( wrdInfo => {
             $(`#wrd_${type}_${i}_img`).attr('src', wrdInfo.thumbnailImageUrl);
             $(`#wrd_${type}_${i}_name`).text(wrdInfo.name);
-            const instances = wrdInfo.instances.filter(instanceInfo => instanceInfo[0].split("~")[0] === worldId.split(":")[1]);
+            const instances = (wrdInfo.instances || []).filter(instanceInfo => instanceInfo[0].split("~")[0] === worldId.split(":")[1]);
             if (instances.length !== 0) {
                 $(`#wrd_${type}_${i}_join`).text(`JOIN (${instances[0][1]}人)`);
             }
