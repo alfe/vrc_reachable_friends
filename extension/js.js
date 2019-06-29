@@ -31,12 +31,13 @@ const appendGroups = (worldArr) => {
         // show user
         users.forEach(user => {
             $(`#wrd_${type}_${i}`).append(`<div>
-                <img width="150" src=${user.currentAvatarThumbnailImageUrl}>
-                <span class="user-name">${user.displayName}
-                    ${user.status === 'active' ? `<span style="color: green">●</span>`
-                    : user.status === 'busy' ? `<span style="color: red">●</span>`
-                    : user.status === 'join me' ? `<span style="color: blue">●</span>`
+                <img class="user-img" src=${user.currentAvatarThumbnailImageUrl}>
+                <span class="user-name">
+                    ${user.status === 'active' ? `<span class="user-status" style="background-color: green"></span>`
+                    : user.status === 'busy' ? `<span class="user-status" style="background-color: red"></span>`
+                    : user.status === 'join me' ? `<span class="user-status" style="background-color: blue"></span>`
                     : `<span></span>`}
+                    ${user.displayName}
                     ${user.statusDescription.length === 0 ? '' 
                     : `<br/><span class="user-status-description">${user.statusDescription}</span>`}
                 </span>
